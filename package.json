@@ -1,0 +1,25 @@
+{
+  "name": "inference-playground",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://giacecco@github.com/OpenAddressesUK/inference-playground.git"
+  },
+  "author": "Gianfranco Cecconi <gc1a13@soton.ac.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenAddressesUK/inference-playground/issues"
+  },
+  "homepage": "https://github.com/OpenAddressesUK/inference-playground",
+  "dependencies": {
+    "async": "^0.9.0",
+    "csv": "<0.4.0",
+    "fs-extra": "^0.16.3",
+    "underscore": "^1.7.0"
+  }
+}
