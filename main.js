@@ -40,15 +40,11 @@ var getListOfOAFiles = function (folder, callback) {
 }
 
 var allEven = function (a) {
-    return _.every(a, function (x) {
-        return x % 2 === 0;
-    });
+    return _.every(a, function (x) { return x % 2 === 0; });
 };
 
 var allOdd = function (a) {
-    return _.every(a, function (x) {
-        return x % 2 === 1;
-    });
+    return _.every(a, function (x) { return x % 2 === 1; });
 };
 
 var howManyInferable = function (sectorFilename, callback) {
@@ -57,9 +53,13 @@ var howManyInferable = function (sectorFilename, callback) {
         .from.stream(fs.createReadStream(sectorFilename), { 'columns': true })
         .to.array(function(temp) {
             temp.forEach(function (x) {
-                // note how I avoid PAOs and SAOs starting by zero,
+                // note how I avoid PAOs and SAOs starting with zero,
                 // see https://github.com/OpenAddressesUK/forum/issues/40
-                var houseNumber = x.pao && x.pao.match(/^([1-9]\d*)/) ? parseInt(x.pao.match(/^([1-9]\d*)/)[1]) : x.sao && x.sao.match(/^([1-9]\d*)/) ? parseInt(x.sao.match(/^([1-9]\d*)/)[1]) : null;
+                var houseNumber = x.pao && x.pao.match(/^([1-9]\d*)/) ?
+                        parseInt(x.pao.match(/^([1-9]\d*)/)[1]) :
+                        x.sao && x.sao.match(/^([1-9]\d*)/) ?
+                            parseInt(x.sao.match(/^([1-9]\d*)/)[1]) :
+                            null;
                 if (houseNumber) data[x["postcode.url"] + "_" + x["street.url"]] = data[x["postcode.url"] + "_" + x["street.url"]] ? _.uniq(data[x["postcode.url"] + "_" + x["street.url"]].concat(houseNumber)).sort() : [ houseNumber ];
             });
             var noOfInferable = _.keys(data).reduce(function (memo, key) {
