@@ -1,12 +1,15 @@
-# inference-playground
+#inference-playground
 
-Why would you need a README.md for something this simple? ;-)
+##How does it work?
+Why would you need a README.md for something this simple? ;-) Download the CSV edition of Open Addresses dataset and look for the Shetlands (ZE) and the town of Lerwick. Take the street named Fogralea, in Sound: on the outskirts to the south-west of the town. The last time I checked it looked like this:
 
 ![Doesn't this say it all?](docs/doesnt-this-say-it-all.png)
 
-This script tests Open Addresses UK's upcoming first, relatively conservative address inference algorithm vs the latest downloadable edition of the data. The objective is to check the volume of addresses that can be generated before proceeding to proper implementation and integration in the live solution.
+The script infers, starting from the two known house numbers 5 and 30, all the presumably existing house numbers between them, shown in the two orange stripes. Easy, isn't it? (I'm making it easy for comic effect, I know it's more complicated than that. How to tell where the red 'X' is for example? Which of the houses was given a name rather than a number?).
 
-See the sample output [here](sample-output.txt). It shows the postcode sector file I start from, the no. of known addresses, the no. of inferred addresses and the increase %. 
+To say it all, the script does the same for all postcode areas. The algorithm being used is OA's upcoming first, relatively conservative address inference algorithm. The objective is to check the volume of addresses that can be generated before proceeding to proper implementation and integration in the live solution.
+
+See the sample output [here](sample-output.txt). It shows the postcode sector file I start from, the no. of known addresses, the no. of inferred addresses and the increase %.
 
 If you want to understand what we mean by inferring addresses, read [@giacecco](https://twitter.com/giacecco)'s blog post [here](https://openaddressesuk.org/blog/2015/02/12/inference). Alternatively, bite straight into the pseudocode algorithm [here](https://github.com/theodi/shared/issues/504#issuecomment-72818881).
 
