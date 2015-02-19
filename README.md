@@ -2,6 +2,8 @@
 
 Why would you need a README.md for something this simple? ;-)
 
+![Doesn't this say it all?](docs/doesnt-this-say-it-all.png)
+
 This script tests Open Addresses UK's upcoming first, relatively conservative address inference algorithm vs the latest downloadable edition of the data. The objective is to check the volume of addresses that can be generated before proceeding to proper implementation and integration in the live solution.
 
 If you want to understand what we mean by inferring addresses, read my blog post [here](https://openaddressesuk.org/blog/2015/02/12/inference). Alternatively, bite straight into the pseudocode algorithm [here](https://github.com/theodi/shared/issues/504#issuecomment-72818881).
