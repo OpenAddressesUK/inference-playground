@@ -11,4 +11,4 @@ If you want to understand what we mean by inferring addresses, read my blog post
 Open Addresses UK is not just about the team working at OA HQ: [we're looking for partners](https://openaddressesuk.org/blog/2015/01/22/crowdsourcing-challenge) and [contributors](https://openaddressesuk.org/about/addingdata), [our source code is open](https://github.com/openaddressesuk), [our planning is in the open](https://huboard.com/OpenAddressesUK/roadmap/). Perhaps you could write the next inference algorithm, or develop a surveying tool that volunteers can use to tell us if those inferred addresses actually exist or not. Follow us on Twitter at [@OpenAddressesUK](https://twitter.com/openaddressesuk) and keep in touch!
 
 ##Licence
-This code is open source under the MIT license. See the LICENSE.md file for full details.
+This code is open source under the MIT license. See the [LICENSE](LICENCE) file for full details.
